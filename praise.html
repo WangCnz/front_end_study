@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes i1 {
+            0% {
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes i2 {
+            0% {
+                opacity: 0;
+            }
+            20% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes i3 {
+            0% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 0;
+            }
+            60% {
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes i4 {
+            0% {
+                opacity: 0;
+            }
+            60% {
+                opacity: 0;
+            }
+            80% {
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes img {
+            0% {
+                opacity: 0;
+            }
+            80% {
+                opacity: 0;
+            }
+            90% {
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        .box {
+            position: relative;
+            margin: 100px auto;
+            padding: 50px;
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            font-size: 30px;
+        }
+        .box i {
+            font-style: normal;
+        }
+        .box i:nth-child(1) {
+            animation: i1 3s infinite;
+        }
+        .box i:nth-child(2) {
+            animation: i2 3s infinite;
+        }
+        .box i:nth-child(3) {
+            animation: i3 3s infinite;
+        }
+        .box i:nth-child(4) {
+            animation: i4 3s infinite;
+        }
+        .box img {
+            margin-top: 20px;
+            animation: img 3s infinite;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>
+            <i>涂</i>
+            <i>总</i>
+            <i>牛</i>
+            <i>逼</i>
+        </h2> 
+        <img src="./images/li.jpg" alt="">
+        <!-- <div class="cover"></div> -->
+    </div>
+    <script src="./js/lodash.js"></script>
+    <script src="./js/axios.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

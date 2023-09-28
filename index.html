@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a {
+            display: block;
+            padding: 15px;
+            color: #6f6f6f;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:hover {
+            color: #6f6f6f;
+        }
+        a:visited {
+            color: #6f6f6f;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <a href="./login.html" class="personal-info">请先登录</a>
+        <a href="./register.html">免费注册</a>
+    </div>
+    <script>
+        const personalInfo = document.querySelector('.card .personal-info')
+        let login = JSON.parse(localStorage.getItem('loginInfo')) 
+        if (login) {
+            personalInfo.innerText = login.username
+        }
+    </script>
+</body>
+</html>

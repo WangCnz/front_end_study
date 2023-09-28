@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        a {
+            color: #6f6f6f;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:hover {
+            color: #6f6f6f;
+        }
+        a:visited {
+            color: #6f6f6f;
+        }
+        input {
+            outline: none;
+        }
+        body {
+            background-color: #f2f2f2;
+        }
+        form {
+            margin: 100px auto;
+            width: 380px;
+            height: 360px;
+            background-color: #fff;
+        }
+        form a {
+            display: block;
+            padding: 10px;
+            margin-bottom: 40px;
+            text-align: right;
+        }
+        form div {
+            position: relative;
+            margin: 0 auto;
+            width: 300px;
+            height: 55px;
+        }
+        form div .shade {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            width: 33px;
+            height: 33px;
+            background-color: #cfcdcd;
+        }
+        form div input {
+            border: 1px solid #17bb9b;
+            padding-left: 45px;
+            width: 300px;
+            height: 35px;
+        }
+        form div input[type=checkbox] {
+            width: 15px;
+            height: 15px;
+        }
+        form .contract i {
+            color: #757575;
+            font-style: normal;
+        }
+        form .login button {
+            border: 0;
+            width: 300px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #17bb9b;
+            color: #fff;
+            cursor: pointer;
+        }
+        form .button-box {
+            display: flex;
+            justify-content: space-between;
+        }
+        form .button-box a {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="info">
+        <a href="./index.html">进入网站首页</a>
+        <div class="username">
+            <div class="shade"></div>
+            <input type="text" name="username" placeholder="请输入用户名称/手机号码">
+        </div>
+        <div class="password">
+            <div class="shade"></div>
+            <input type="password" name="password" placeholder="请输入密码">
+        </div>
+        <div class="contract">
+            <input type="checkbox" name="contract"> <i>我已同意服务条款</i>
+        </div>
+        <div class="login">
+            <button>登 录</button>
+        </div>
+        <div class="button-box">
+            <a href="#">忘记密码?</a>
+            <a href="./register.html">免费注册</a>
+        </div>
+    </form>
+    <script>
+        const info = document.querySelector('.info') 
+        const username = document.querySelector('.username input')
+        const password = document.querySelector('.password input')
+        const contract = document.querySelector('.contract input')
+        console.log(contract)
+        info.addEventListener('submit', function (e) {
+            if (!username.value) {
+                alert('请填写手机号')
+                e.preventDefault()
+            }
+            if (!password.value) {
+                alert('请填写密码')
+                e.preventDefault()
+            }
+            if (!contract.checked) {
+                alert('请同意协议')
+                e.preventDefault()
+            }
+            if (username.value && password.value && contract.checked) {
+                e.preventDefault()
+                let login = {
+                username: username.value,
+                password: password.value
+            }
+                localStorage.setItem('loginInfo', JSON.stringify(login))
+                location.href = './index.html'
+            }
+
+        })
+
+    </script>
+</body>
+</html>

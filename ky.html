@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        @keyframes outer-rotate {
+            0% {
+                transform: rotate(0);
+            }
+            70% {
+                transform: rotate(360deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes text-display1 {
+            0% {
+                opacity: 0;
+            }
+            7% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes text-display2 {
+            0% {
+                opacity: 0;
+            }
+            7% {
+                opacity: 0;
+            }
+            14% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes text-display3 {
+            0% {
+                opacity: 0;
+            }
+            14% {
+                opacity: 0;
+            }
+            21% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes text-display4 {
+            0% {
+                opacity: 0;
+            }
+            21% {
+                opacity: 0;
+            }
+            28% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes text-display5 {
+            0% {
+                opacity: 0;
+            }
+            28% {
+                opacity: 0;
+            }
+            35% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes text-display6 {
+            0% {
+                opacity: 0;
+            }
+            35% {
+                opacity: 0;
+            }
+            42% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes text-display7 {
+            0% {
+                opacity: 0;
+            }
+            42% {
+                opacity: 0;
+            }
+            49% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes text-display8 {
+            0% {
+                opacity: 0;
+            }
+            49% {
+                opacity: 0;
+            }
+            56% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes text-display9 {
+            0% {
+                opacity: 0;
+            }
+            56% {
+                opacity: 0;
+            }
+            63% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes text-display10 {
+            0% {
+                opacity: 0;
+            }
+            63% {
+                opacity: 0;
+            }
+            70% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .box {
+            position: relative;
+            border: 1px solid gray;
+            margin: 100px auto;
+            width: 800px;
+            height: 800px;
+        }
+        .box .box1 {
+            position: absolute;
+            top: 140px;
+            left: 140px;
+            width: 520px;
+            height: 520px;
+            animation: outer-rotate 2s linear 0.2s infinite;
+        }
+        .box div .circle1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: #fa6b31;
+        }
+
+        .box .box2 {
+            position: absolute;
+            top: 141px;
+            left: 141px;
+            width: 518px;
+            height: 518px;
+            animation: outer-rotate 2s linear 0.4s infinite;
+        }
+        .box div .circle2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 49px;
+            height: 49px;
+            border-radius: 24.5px;
+            background-color: #fa6b31;
+        }
+
+        .box .box3 {
+            position: absolute;
+            top: 142px;
+            left: 142px;
+            width: 516px;
+            height: 516px;
+            animation: outer-rotate 2s linear 0.6s infinite;
+        }
+        .box div .circle3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
+            background-color: #fa6b31;
+        }
+
+        .box .box4 {
+            position: absolute;
+            top: 143px;
+            left: 143px;
+            width: 518px;
+            height: 518px;
+            animation: outer-rotate 2s linear 0.8s infinite;
+        }
+        .box div .circle4 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 47px;
+            height: 47px;
+            border-radius: 23.5px;
+            background-color: #fa6b31;
+        }
+
+        .box .box5 {
+            position: absolute;
+            top: 144px;
+            left: 144px;
+            width: 520px;
+            height: 520px;
+            animation: outer-rotate 2s linear 1s infinite;
+        }
+        .box div .circle5 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 46px;
+            height: 46px;
+            border-radius: 23px;
+            background-color: #fa6b31;
+        }
+        .box .text {
+            position: absolute;
+            top: 600px;
+            left: 300px;
+        }
+        .box .text i {
+            font-weight: bolder;
+            font-family: 'Microsoft YaHei';
+            font-size: 30px;
+        }
+        .box .text i:nth-child(1) {
+            animation: text-display1 2s linear 0s infinite;
+        }
+        .box .text i:nth-child(2) {
+            animation: text-display2 2s linear 0s infinite;
+        }
+        .box .text i:nth-child(3) {
+            animation: text-display3 2s linear 0s infinite;
+        }
+        .box .text i:nth-child(4) {
+            animation: text-display4 2s linear 0s infinite;
+        }
+        .box .text i:nth-child(5) {
+            animation: text-display5 2s linear 0s infinite;
+        }
+        .box .text i:nth-child(6) {
+            animation: text-display6 2s linear 0s infinite;
+        }
+        .box .text i:nth-child(7) {
+            animation: text-display7 2s linear 0s infinite;
+        }
+        .box .text i:nth-child(8) {
+            animation: text-display8 2s linear 0s infinite;
+        }
+        .box .text i:nth-child(9) {
+            animation: text-display9 2s linear 0s infinite;
+        }
+        .box .text i:nth-child(10) {
+            animation: text-display10 2s linear 0s infinite;
+        }
+        .box .little-k {
+            position: absolute; 
+            z-index: -1;
+            top: 205px;
+            left: 205px;
+            width: 390px;
+            height: 390px;
+        }
+        .box .little-k img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            <div class="circle1"></div>
+        </div>
+        <div class="box2">
+            <div class="circle2"></div>
+        </div>
+        <div class="box3">
+            <div class="circle3"></div>
+        </div>
+        <div class="box4">
+            <div class="circle4"></div>
+        </div>
+        <div class="box5">
+            <div class="circle5"></div>
+        </div>
+        <div class="little-k">
+            <img src="./ky.jpg" alt="">
+        </div>
+        <div class="text">
+            <i>l</i>
+            <i>o</i>
+            <i>a</i>
+            <i>d</i>
+            <i>i</i>
+            <i>n</i>
+            <i>g</i>
+            <i>.</i>
+            <i>.</i>
+            <i>.</i>
+        </div>
+    </div>
+
+
+</body>
+</html>
